@@ -5,10 +5,10 @@ module Account::Coins {
     use AptosFramework::Coin::{Self, MintCapability, BurnCapability};
 
     /// Represents test USDT coin.
-    struct USDT has store {}
+    struct USDT has key {}
 
     /// Represents test BTC coin.
-    struct BTC has store {}
+    struct BTC has key {}
 
     /// Stroing mint/burn capabilities for `USDT` and `BTC` on user account for mint purposes.
     struct Caps<phantom CoinType> has key {

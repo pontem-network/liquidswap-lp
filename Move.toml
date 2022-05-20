@@ -3,7 +3,7 @@ name = "AptosSwapLP"
 version = "0.0.1"
 
 [dependencies]
-AptosSwap = { git = "https://github.com/pontem-network/aptos-swap.git", rev = "fixes" }
+AptosSwap = { git = "https://github.com/pontem-network/aptos-swap.git", rev = "f18a30c23e49aab7fb33aa6cbdda335c96d332b9" }
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"
