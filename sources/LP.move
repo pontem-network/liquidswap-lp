@@ -10,7 +10,7 @@ module Account::LP {
     const ERR_NOT_SORTED: u64 = 100;
 
     /// Represents `LP` coin with `X` and `Y` coin types.
-    struct LP<phantom X, phantom Y> has key {}
+    struct LP<phantom X, phantom Y> {}
 
     /// Creates `LP` coin and registers new liquidity pool.
     public(script) fun register_liquidity_pool<X, Y>(account: &signer) {
