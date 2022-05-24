@@ -1,13 +1,13 @@
 [package]
 name = "AptosSwapLP"
-version = "0.0.1"
+version = "0.1.0"
 
 [dependencies]
 AptosSwap = { git = "https://github.com/pontem-network/aptos-swap.git", rev = "master" }
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"
-rev = "a615536bdb8a8dedb7ec029ddfbf12b80b64f979"
+rev = "bb3a847c6ae8967661826775cd026f6fdb2abf0c"
 subdir = "aptos-move/framework/aptos-framework/"
 
 [addresses]
