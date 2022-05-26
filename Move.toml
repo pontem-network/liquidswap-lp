@@ -1,9 +1,9 @@
 [package]
-name = "AptosSwapLP"
+name = "MultiSwapLP"
 version = "0.1.0"
 
 [dependencies]
-AptosSwap = { git = "https://github.com/pontem-network/aptos-swap.git", rev = "v0.1.0" }
+MultiSwap = { git = "https://github.com/pontem-network/multi-swap.git", rev = "v0.2.0" }
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"

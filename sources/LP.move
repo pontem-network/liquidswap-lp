@@ -3,8 +3,8 @@ module Account::LP {
     use Std::Errors;
     use Std::ASCII::string;
     use AptosFramework::Coin;
-    use AptosSwap::LiquidityPool;
-    use AptosSwap::CoinHelper;
+    use MultiSwap::LiquidityPool;
+    use MultiSwap::CoinHelper;
 
     /// When `X` and `Y` aren't sorted.
     const ERR_NOT_SORTED: u64 = 100;

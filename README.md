@@ -1,6 +1,6 @@
-# Aptos Swap LP
+# MultiSwap LP
 
-Liquidity Pool Coin template and test coins for Aptos Swap.
+Liquidity Pool Coin template and test coins for MultiSwap.
 
 See built binary in [binaries](binaries) folder.
 
