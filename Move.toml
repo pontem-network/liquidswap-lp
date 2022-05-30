@@ -3,7 +3,7 @@ name = "MultiSwapLP"
 version = "0.1.0"
 
 [dependencies]
-MultiSwap = { git = "https://github.com/pontem-network/multi-swap.git", rev = "v0.2.0" }
+MultiSwap = { git = "git@github.com:pontem-network/multi-swap.git", rev = "v0.2.0" }
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"
