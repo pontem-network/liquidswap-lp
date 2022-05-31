@@ -10,7 +10,7 @@ module Account::Coins {
     /// Represents test BTC coin.
     struct BTC {}
 
-    /// Stroing mint/burn capabilities for `USDT` and `BTC` on user account for mint purposes.
+    /// Storing mint/burn capabilities for `USDT` and `BTC` coins under user account.
     struct Caps<phantom CoinType> has key {
         mint: MintCapability<CoinType>,
         burn: BurnCapability<CoinType>,
