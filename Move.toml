@@ -3,11 +3,11 @@ name = "MultiSwapLP"
 version = "0.2.0"
 
 [dependencies]
-MultiSwap = { git = "git@github.com:pontem-network/multi-swap.git", rev = "v0.2.0" }
+MultiSwap = { git = "git@github.com:pontem-network/multi-swap.git", rev = "da907fb109ade954af66d196cb7050f10825a1ff" }
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"
-rev = "bb3a847c6ae8967661826775cd026f6fdb2abf0c"
+rev = "367608ab5cf726039ff44bfdac1f2177210b1440"
 subdir = "aptos-move/framework/aptos-framework/"
 
 [addresses]
