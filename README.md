@@ -1,6 +1,6 @@
-# MultiSwap LP
+# Liquidswap LP
 
-Liquidity Pool Coin template and test coins for MultiSwap.
+Liquidity Pool Coin template and test coins for [Liquidswap](https://liquidswap.pontem.network).
 
 See built binary in [binaries](binaries) folder.
 
