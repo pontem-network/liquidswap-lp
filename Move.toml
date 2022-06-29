@@ -2,13 +2,9 @@
 name = "LiquidswapLP"
 version = "0.2.0"
 
-[dependencies]
-MultiSwap = { git = "git@github.com:pontem-network/multi-swap.git", rev = "da907fb109ade954af66d196cb7050f10825a1ff" }
-
-[dependencies.AptosFramework]
-git = "https://github.com/aptos-labs/aptos-core.git"
-rev = "367608ab5cf726039ff44bfdac1f2177210b1440"
-subdir = "aptos-move/framework/aptos-framework/"
+[dependencies.MultiSwap]
+git = "git@github.com:pontem-network/multi-swap.git"
+rev = "v0.1.3"
 
 [addresses]
 Account = "0x43417434fd869edee76cca2a4d2301e528a1551b1d719b75c350c3c97d15b8b9"
