@@ -1,15 +1,10 @@
 [package]
 name = "LiquidswapLP"
-version = "0.2.0"
-
-[dependencies.MoveStdlib]
-git = "https://github.com/aptos-labs/aptos-core.git"
-rev = "devnet"
-subdir = "aptos-move/framework/move-stdlib"
+version = "0.3.0"
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"
-rev = "devnet"
+rev = "a3143756d498821f4f51a5970c7ea35d483938b3"
 subdir = "aptos-move/framework/aptos-framework"
 
 [addresses]
