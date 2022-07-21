@@ -2,9 +2,9 @@
 name = "LiquidswapLP"
 version = "0.2.0"
 
-[dependencies.MultiSwap]
+[dependencies.Liquidswap]
 git = "git@github.com:pontem-network/multi-swap.git"
-rev = "v0.1.3"
+rev = "41a84e7883e32c45cb2ade16d651817b30b7e03d"
 
 [addresses]
-Account = "0x43417434fd869edee76cca2a4d2301e528a1551b1d719b75c350c3c97d15b8b9"
+liquidswap_lp = "0x43417434fd869edee76cca2a4d2301e528a1551b1d719b75c350c3c97d15b8b9"
