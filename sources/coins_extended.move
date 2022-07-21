@@ -1,9 +1,9 @@
 /// Extended standard test coins with additional ones.
-module Account::CoinsExtended {
-    use Std::Signer;
-    use Std::ASCII::string;
+module liquidswap_lp::coins_extended {
+    use std::signer;
+    use std::string::utf8;
 
-    use AptosFramework::Coin::{Self, MintCapability, BurnCapability};
+    use aptos_framework::coin::{Self, MintCapability, BurnCapability};
 
     /// Represents test USDC coin.
     struct USDC {}
@@ -21,16 +21,16 @@ module Account::CoinsExtended {
     }
 
     /// Initializes `BTC` and `USDT` coins.
-    public(script) fun register_coins(token_admin: signer) {
+    public entry fun register_coins(token_admin: signer) {
         let (eth_m, eth_b) =
-            Coin::initialize<ETH>(&token_admin,
-                string(b"ETH"), string(b"ETH"), 8, true);
+            coin::initialize<ETH>(&token_admin,
+                utf8(b"ETH"), utf8(b"ETH"), 8, true);
         let (usdc_m, usdc_b) =
-            Coin::initialize<USDC>(&token_admin,
-                string(b"USDC"), string(b"USDC"), 6, true);
+            coin::initialize<USDC>(&token_admin,
+                utf8(b"USDC"), utf8(b"USDC"), 6, true);
         let (dai_m, dai_b) =
-            Coin::initialize<DAI>(&token_admin,
-                string(b"DAI"), string(b"DAI"), 6, true);
+            coin::initialize<DAI>(&token_admin,
+                utf8(b"DAI"), utf8(b"DAI"), 6, true);
 
         move_to(&token_admin, Caps<ETH> { mint: eth_m, burn: eth_b });
         move_to(&token_admin, Caps<USDC> { mint: usdc_m, burn: usdc_b });
@@ -38,10 +38,10 @@ module Account::CoinsExtended {
     }
 
     /// Mints new coin `CoinType` on account `acc_addr`.
-    public(script) fun mint_coin<CoinType>(token_admin: &signer, acc_addr: address, amount: u64) acquires Caps {
-        let token_admin_addr = Signer::address_of(token_admin);
+    public entry fun mint_coin<CoinType>(token_admin: &signer, acc_addr: address, amount: u64) acquires Caps {
+        let token_admin_addr = signer::address_of(token_admin);
         let caps = borrow_global<Caps<CoinType>>(token_admin_addr);
-        let coins = Coin::mint<CoinType>(amount, &caps.mint);
-        Coin::deposit(acc_addr, coins);
+        let coins = coin::mint<CoinType>(amount, &caps.mint);
+        coin::deposit(acc_addr, coins);
     }
 }
