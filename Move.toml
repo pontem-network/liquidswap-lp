@@ -1,10 +1,10 @@
 [package]
 name = "LiquidswapLP"
-version = "0.4.4"
+version = "0.4.5"
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"
-rev = "1570509e746b6626264cb6e9c0c8371683253961"
+rev = "a58060f88d66b90a0548a506e22270b04a328db3"
 subdir = "aptos-move/framework/aptos-framework"
 
 [addresses]
