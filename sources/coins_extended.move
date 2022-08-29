@@ -21,24 +21,24 @@ module liquidswap_lp::coins_extended {
     }
 
     /// Initializes `BTC` and `USDT` coins.
-    public entry fun register_coins(token_admin: signer) {
+    public entry fun register_coins(token_admin: &signer) {
         let (eth_b, eth_f, eth_m) =
-            coin::initialize<ETH>(&token_admin,
+            coin::initialize<ETH>(token_admin,
                 utf8(b"ETH"), utf8(b"ETH"), 8, true);
         let (usdc_b, usdc_f, usdc_m) =
-            coin::initialize<USDC>(&token_admin,
+            coin::initialize<USDC>(token_admin,
                 utf8(b"USDC"), utf8(b"USDC"), 6, true);
         let (dai_b, dai_f, dai_m) =
-            coin::initialize<DAI>(&token_admin,
+            coin::initialize<DAI>(token_admin,
                 utf8(b"DAI"), utf8(b"DAI"), 6, true);
 
         coin::destroy_freeze_cap(eth_f);
         coin::destroy_freeze_cap(usdc_f);
         coin::destroy_freeze_cap(dai_f);
 
-        move_to(&token_admin, Caps<ETH> { mint: eth_m, burn: eth_b });
-        move_to(&token_admin, Caps<USDC> { mint: usdc_m, burn: usdc_b });
-        move_to(&token_admin, Caps<DAI> { mint: dai_m, burn: dai_b });
+        move_to(token_admin, Caps<ETH> { mint: eth_m, burn: eth_b });
+        move_to(token_admin, Caps<USDC> { mint: usdc_m, burn: usdc_b });
+        move_to(token_admin, Caps<DAI> { mint: dai_m, burn: dai_b });
     }
 
     /// Mints new coin `CoinType` on account `acc_addr`.

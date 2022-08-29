@@ -17,19 +17,19 @@ module liquidswap_lp::coins {
     }
 
     /// Initializes `BTC` and `USDT` coins.
-    public entry fun register_coins(token_admin: signer) {
+    public entry fun register_coins(token_admin: &signer) {
         let (btc_b, btc_f, btc_m) =
-            coin::initialize<BTC>(&token_admin,
+            coin::initialize<BTC>(token_admin,
                 utf8(b"Bitcoin"), utf8(b"BTC"), 8, true);
         let (usdt_b, usdt_f, usdt_m) =
-            coin::initialize<USDT>(&token_admin,
+            coin::initialize<USDT>(token_admin,
                 utf8(b"Tether"), utf8(b"USDT"), 6, true);
 
         coin::destroy_freeze_cap(btc_f);
         coin::destroy_freeze_cap(usdt_f);
 
-        move_to(&token_admin, Caps<BTC> { mint: btc_m, burn: btc_b });
-        move_to(&token_admin, Caps<USDT> { mint: usdt_m, burn: usdt_b });
+        move_to(token_admin, Caps<BTC> { mint: btc_m, burn: btc_b });
+        move_to(token_admin, Caps<USDT> { mint: usdt_m, burn: usdt_b });
     }
 
     /// Mints new coin `CoinType` on account `acc_addr`.
