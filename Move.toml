@@ -1,6 +1,6 @@
 [package]
 name = "LiquidswapLP"
-version = "0.4.9"
+version = "0.4.10"
 upgrade_policy = "immutable"
 
 [dependencies.AptosFramework]
@@ -9,4 +9,4 @@ rev = "f18cc2cac521b2a2eae5a5f08f1b787f61a2279d"
 subdir = "aptos-move/framework/aptos-framework"
 
 [addresses]
-liquidswap_lp = "0x19f6b26011f2f4050b895de44bf93d7c25f54117ac2f8736287257cc20e351bb"
+liquidswap_lp = "0x43417434fd869edee76cca2a4d2301e528a1551b1d719b75c350c3c97d15b8b9"
